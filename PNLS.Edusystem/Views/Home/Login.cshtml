@@ -1,0 +1,35 @@
+﻿@model PNLS.Edusystem.Models.AdMin
+@{
+    ViewData["Title"] = "Login";
+}
+<style>
+   
+</style>
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="~/img/login.png.jpg" height="200px" width="200px" class="rounded-circle ms-5" alt="Cinque Terre">
+            <br /><br />
+            <p style="color:red">@ViewBag.message</p>
+            <form asp-action="Login" asp-controller="Home" method="post" id="im">
+                <input asp-for="Email" placeholder="Enter Email" class="form-control" />
+                <br />
+                <input asp-for="Password" placeholder="Password" class="form-control" />
+                <br />
+                <input type="submit" value="Login" class="btn btn-success" style="height:auto;width:80px"/>
+               
+            </form>
+            <br />
+            &nbsp;&nbsp;<a asp-action="signup" asp-controller="Home" style="text-decoration:none">Sign Up</button></a>
+            <br /><br />
+            
+                    </div>
+                    
+        <div class="col-sm-4"></div>
+                </div>
+            </div>
+        

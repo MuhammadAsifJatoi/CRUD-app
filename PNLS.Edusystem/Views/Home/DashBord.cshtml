@@ -1,0 +1,171 @@
+﻿@model IEnumerable<PNLS.Edusystem.Models.StudentsRecod>
+
+@{
+    ViewData["Title"] = "DashBord";
+}
+
+<style>
+    body {
+        color: whitesmoke;
+    }
+
+</style>
+<br /><br />
+
+    <br />
+
+<h1 class="text-success ms-5">Welcom to PNLS.EduSystem</h1>
+<br />
+    
+          
+
+
+            <div class="container bg-light container-fluid">
+                <div class="row text-center ">
+                    <div class="col-sm-3">
+                        <button class="btn btn-success" style="width:120px;"><a asp-action="Create" style="text-decoration:none;color:azure">Add New</a></button>
+                        break;
+                    </div>
+                    <div class="col-sm-3">
+                    @{
+                        foreach (var item in Model)
+                    {
+                        <button class="btn btn-success" style="width:120px;"><a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration:none;color:azure">Update</a></button>
+                        break;
+                    }
+                        }
+                    </div>
+                    <div class="col-sm-3">
+                        @{
+                            foreach (var item in Model)
+                    {
+                        <button class="btn btn-success" style="width:120px"><a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration:none;color:azure">Delete</a>
+
+                        </button>
+                        break;
+                    }
+                        }
+                
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success">Search Student</button>
+                    </div>
+                </div>
+
+            </div>
+        
+    
+    <a asp-action="Create">Create New</a>
+<br /><
+<table class="table table-bordered alert-dark">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deparment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distrit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.provence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Joindate)
+            </th>
+            <th>Manage Data</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deparment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distrit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.provence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Joindate)
+            </td>
+            <td class="bg-danger">
+                    <button class="btn btn-danger" style="width:80px"> <a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration:none;color:darkgray">Edit</a></button>
+             <br>
+                    <button class="btn btn-danger" style="width:80px"><a asp-action="Details" asp-route-id="@item.Id" style="text-decoration:none;color:darkgray">Details</a></button>
+             <br>
+             <button class="btn btn-danger bg" style="width:80px"><a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration:none;color:darkgray">Delete</a></button>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
