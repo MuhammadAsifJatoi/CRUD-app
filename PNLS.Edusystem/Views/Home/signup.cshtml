@@ -4,13 +4,18 @@
     ViewData["Title"] = "signup";
 }
 
-<h1>signup</h1>
+<h1 class="text-center">Sign Up</h1>
 <p>@TempData["insert_data"]</p>
+<<<<<<< HEAD
+<div class="container bg-success p-5 mt-5">
+=======
 
-<h4>AdMin</h4>
+
 <hr />
+<div class="container bg-success p-5">
+>>>>>>> 24503d62ca4c307ea39894e3c1b1ef5b1cb4efb2
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 offset-4">
         <form asp-action="signup">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -38,14 +43,14 @@
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Register" class="btn btn-info" />
+                <a asp-action="Login" class="btn btn-info">go for Login</a>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Login">go for Login</a>
 </div>
+
 
