@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PNLS.Edusystem.Models;
 
@@ -11,9 +12,10 @@ using PNLS.Edusystem.Models;
 namespace PNLS.Edusystem.Migrations
 {
     [DbContext(typeof(AdminDbcontext))]
-    partial class AdminDbcontextModelSnapshot : ModelSnapshot
+    [Migration("20231021170256_actualdone")]
+    partial class actualdone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
